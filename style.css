@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:"v1";
+    src: url(Fonts/Baloo_Tamma_2/);
+}
+
+@font-face {
+    font-family:"v2";
+    src: url(Fonts/BalooBhai2-VariableFont_wght.ttf);
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "v2";
+}
+
+p {
+    font-family: "v1";
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+details {
+    width: 100vw;
+    font-family: Arial, sans-serif;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    color: white;
+    width: 100vw;
+    background-color: rgba(4, 4, 66, 0.308);
+    padding: 10px 8px;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 3px;
+    background: #ffffff;
+    display: block;
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before { top: -8px; }
+.menu-icon::after { top: 8px; }
+
+details[open] summary .menu-icon {
+    background: transparent;
+}
+
+details[open] summary .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+details[open] summary .menu-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.menu-content {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+header > a > p {
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    color: aliceblue;
+    border-radius: 10px;
+    text-decoration: wavy;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#work {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 80vh;
+    background-color: black;
+}
+
+.home {
+    position: static;
+    height: 200vh;
+}
+
+/* Novo container abaixo do vídeo */
+#work{
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.705);
+}
+
+#work1 {
+    background-image: url(imgs/work1.png);
+    background-size: 130%;
+    background-position: center left;
+}
+
+#work2{
+    background-image: url(imgs/work2.png);
+    background-size: cover;
+    background-position: center top;
+
+}
+#work1, #work2, #work3 {
+
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    height: 48vh;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+.button {
+
+    background-color: darkgreen;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(50%, 420%);
+    font-size: 1.3em;
+    
+
+}
+
+.button  > p {
+
+    font-family: "v1";
+    
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+
+}
